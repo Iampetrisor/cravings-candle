@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lumânări artizanale din ceară de soia cu arome naturale și teme creative. Tematică de Crăciun, băuturi și deserturi.">
     <title>Lumânări Artizanale din Ceară de Soia</title>
+
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Link către fișierul CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loader animat -->
+    <div id="loader">
+        <div class="loader-container">
+            <div class="flame"></div>
+            <div class="wick"></div>
+            <div class="wax"></div>
+        </div>
+    </div>
+
     <header>
         <h1>Lumânări Artizanale din Ceară de Soia</h1>
         <p>Arome naturale, teme creative, perfect pentru cadouri sau pentru tine!</p>
@@ -15,68 +29,73 @@
     </header>
 
     <nav>
-        <a href="#craciun">Crăciun</a>
-        <a href="#bauturi">Băuturi</a>
-        <a href="#deserturi">Deserturi</a>
+        <ul>
+            <li><a href="#craciun">Crăciun</a></li>
+            <li><a href="#bauturi">Băuturi</a></li>
+            <li><a href="#deserturi">Deserturi</a></li>
+        </ul>
     </nav>
 
-    <section id="craciun">
+    <!-- Carousel Crăciun cu indicatori -->
+    <section id="craciun" class="carousel-section parallax">
         <h2>Tematică de Crăciun</h2>
-        <div class="products">
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_bradut.html"><img src="https://github.com/user-attachments/assets/4c7dcc4a-c208-4fa6-aa06-ead07c2e2c46" alt="Lumânare Bradut"></a>
+        <div class="carousel-container">
+            <button class="carousel-control prev">◀</button>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://example.com/image1.jpg" alt="Lumânare Bradut" loading="lazy">
                 </div>
-                <h3>Bradut</h3>
-                <p>Miros de pin și scorțișoară</p>
-            </div>
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_om_de_zapada.html"><img src="lumânare_om_de_zapada.jpg" alt="Lumânare Om de Zăpadă"></a>
+                <div class="carousel-item">
+                    <img src="https://example.com/image2.jpg" alt="Lumânare Om de Zăpadă" loading="lazy">
                 </div>
-                <h3>Om de Zăpadă</h3>
-                <p>Arome de vanilie și turtă dulce</p>
             </div>
+            <button class="carousel-control next">▶</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
         </div>
     </section>
 
-    <section id="bauturi">
+    <!-- Carousel Băuturi cu indicatori -->
+    <section id="bauturi" class="carousel-section parallax">
         <h2>Tematică de Băuturi</h2>
-        <div class="products">
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_aperol.html"><img src="lumânare_aperol.jpg" alt="Lumânare Aperol"></a>
+        <div class="carousel-container">
+            <button class="carousel-control prev">◀</button>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://example.com/image3.jpg" alt="Lumânare Aperol" loading="lazy">
                 </div>
-                <h3>Aperol Spritz</h3>
-                <p>Note de portocală și prosecco</p>
-            </div>
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_whiskey.html"><img src="lumânare_whiskey.jpg" alt="Lumânare Whiskey"></a>
+                <div class="carousel-item">
+                    <img src="https://example.com/image4.jpg" alt="Lumânare Whiskey" loading="lazy">
                 </div>
-                <h3>Whiskey</h3>
-                <p>Miros de vanilie și stejar</p>
             </div>
+            <button class="carousel-control next">▶</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
         </div>
     </section>
 
-    <section id="deserturi">
+    <!-- Carousel Deserturi cu indicatori -->
+    <section id="deserturi" class="carousel-section parallax">
         <h2>Tematică de Deserturi</h2>
-        <div class="products">
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_inghetata.html"><img src="lumânare_inghetata.jpg" alt="Lumânare Înghețată"></a>
+        <div class="carousel-container">
+            <button class="carousel-control prev">◀</button>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://example.com/image5.jpg" alt="Lumânare Înghețată" loading="lazy">
                 </div>
-                <h3>Înghețată cu fructe</h3>
-                <p>Fructe de pădure și vanilie</p>
-            </div>
-            <div class="product">
-                <div class="img-container">
-                    <a href="detalii_macarons.html"><img src="lumânare_macarons.jpg" alt="Lumânare Macarons"></a>
+                <div class="carousel-item">
+                    <img src="https://example.com/image6.jpg" alt="Lumânare Macarons" loading="lazy">
                 </div>
-                <h3>Macarons</h3>
-                <p>Arome de zmeură și ciocolată albă</p>
             </div>
+            <button class="carousel-control next">▶</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
         </div>
     </section>
 
@@ -88,6 +107,9 @@
             <a href="https://tiktok.com/@pagina_ta" target="_blank">TikTok</a>
         </p>
     </footer>
+
+    <!-- Butonul "Întoarce-te la începutul paginii" -->
+    <button id="scrollToTop" title="Întoarce-te la începutul paginii">⬆</button>
 
     <script src="scripts.js"></script>
 </body>

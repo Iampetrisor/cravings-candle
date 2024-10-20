@@ -1,28 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.img-container img');
-    const navLinks = document.querySelectorAll('nav a');
-
-    // Smooth scroll
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    // Lazy loading
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
         });
     });
 
-    // Zoom, rotate, and fade effect
-    images.forEach(function(image) {
-        image.addEventListener('mouseover', function() {
-            image.style.transform = 'scale(1.3) rotate(10deg)';
-            image.style.opacity = '0.9';
-        });
+    // Loader animation
+    const loader = document.getElementById('loader');
+    window.addEventListener('load', () => {
+        loader.style.display = 'none';  // Ascunde loader-ul după încărcare
+    });
 
-        image.addEventListener('mouseout', function() {
-            image.style.transform = 'scale(1)';
-            image.style.opacity = '1';
-        });
+    // Scroll to Top Button
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    
+    window.onscroll = function () {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    };
+
+    scrollToTopButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
