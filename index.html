@@ -3,108 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lumânări artizanale din ceară de soia cu arome naturale și teme creative. Tematică de Crăciun, băuturi și deserturi.">
-    <title>Lumânări Artizanale din Ceară de Soia</title>
+    <meta name="description" content="Lumânări handmade din ceară naturală, realizate cu pasiune și atenție la detalii.">
+    <title>Lumânări Handmade – Prezentare</title>
 
-    <!-- Import Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <!-- Link către fișierul CSS -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loader animat -->
-    <div id="loader">
-        <div class="loader-container">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="wax"></div>
+    <header class="hero-section">
+        <div class="hero-overlay">
+            <h1>Lumânări Handmade din Ceară Naturală</h1>
+            <p>Realizate cu pasiune, fiecare lumânare spune o poveste unică.</p>
         </div>
-    </div>
-
-    <header>
-        <h1>Lumânări Artizanale din Ceară de Soia</h1>
-        <p>Arome naturale, teme creative, perfect pentru cadouri sau pentru tine!</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#craciun">Crăciun</a></li>
-            <li><a href="#bauturi">Băuturi</a></li>
-            <li><a href="#deserturi">Deserturi</a></li>
-        </ul>
-    </nav>
+    <section id="despre" class="about-section">
+        <h2>Despre Lumânările Noastre</h2>
+        <p>
+            Fiecare lumânare este turnată manual din ceară naturală, cu arome subtile și delicate, 
+            create să aducă armonie și calm în orice încăpere. Folosim doar ingrediente naturale 
+            și susținem meșteșugurile tradiționale.
+        </p>
+    </section>
 
-    <!-- Carousel Crăciun -->
-    <section id="craciun" class="carousel-section">
-        <h2>Tematică de Crăciun</h2>
-        <div class="carousel-container">
-            <button class="carousel-control prev">◀</button>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="https://example.com/image1.jpg" alt="Lumânare Bradut" loading="lazy">
-                    <p class="carousel-desc">Bradut - Miros de pin și scorțișoară</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://example.com/image2.jpg" alt="Lumânare Om de Zăpadă" loading="lazy">
-                    <p class="carousel-desc">Om de Zăpadă - Arome de vanilie și turtă dulce</p>
-                </div>
+    <section id="galerie" class="gallery-section">
+        <h2>Galerie</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://example.com/lumanare1.jpg" alt="Lumânare 1">
+                <p>Lumânare cu arome de lavandă</p>
             </div>
-            <button class="carousel-control next">▶</button>
+            <div class="gallery-item">
+                <img src="https://example.com/lumanare2.jpg" alt="Lumânare 2">
+                <p>Lumânare cu note de citrice</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://example.com/lumanare3.jpg" alt="Lumânare 3">
+                <p>Lumânare în formă de trandafir</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://example.com/lumanare4.jpg" alt="Lumânare 4">
+                <p>Lumânare tematică de Crăciun</p>
+            </div>
         </div>
     </section>
 
-    <!-- Carousel Băuturi -->
-    <section id="bauturi" class="carousel-section">
-        <h2>Tematică de Băuturi</h2>
-        <div class="carousel-container">
-            <button class="carousel-control prev">◀</button>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="https://example.com/image3.jpg" alt="Lumânare Aperol" loading="lazy">
-                    <p class="carousel-desc">Aperol - Arome de portocală și prosecco</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://example.com/image4.jpg" alt="Lumânare Whiskey" loading="lazy">
-                    <p class="carousel-desc">Whiskey - Miros de vanilie și stejar</p>
-                </div>
-            </div>
-            <button class="carousel-control next">▶</button>
-        </div>
-    </section>
-
-    <!-- Carousel Deserturi -->
-    <section id="deserturi" class="carousel-section">
-        <h2>Tematică de Deserturi</h2>
-        <div class="carousel-container">
-            <button class="carousel-control prev">◀</button>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="https://example.com/image5.jpg" alt="Lumânare Înghețată" loading="lazy">
-                    <p class="carousel-desc">Înghețată - Fructe de pădure și vanilie</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://example.com/image6.jpg" alt="Lumânare Macarons" loading="lazy">
-                    <p class="carousel-desc">Macarons - Arome de zmeură și ciocolată albă</p>
-                </div>
-            </div>
-            <button class="carousel-control next">▶</button>
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Contactează-mă pentru mai multe detalii sau urmează-mă pe rețelele de socializare:</p>
+        <div class="social-links">
+            <a href="https://instagram.com/pagina_ta" target="_blank">Instagram</a>
+            <a href="https://facebook.com/pagina_ta" target="_blank">Facebook</a>
         </div>
     </section>
 
     <footer>
-        <p>Urmează-ne pe rețelele de socializare:</p>
-        <p>
-            <a href="https://instagram.com/pagina_ta" target="_blank">Instagram</a> |
-            <a href="https://facebook.com/pagina_ta" target="_blank">Facebook</a> |
-            <a href="https://tiktok.com/@pagina_ta" target="_blank">TikTok</a>
-        </p>
+        <p>&copy; 2024 Lumânări Handmade. Toate drepturile rezervate.</p>
     </footer>
 
-    <!-- Butonul "Întoarce-te la începutul paginii" -->
-    <button id="scrollToTop" title="Întoarce-te la începutul paginii">⬆</button>
-
-    <!-- Script JavaScript -->
-    <script src="scripts.js"></script>
 </body>
 </html>

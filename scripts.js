@@ -1,13 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Lazy loading pentru imagini
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    let imagesLoaded = 0;
+
+    // Ascundere loader când toate imaginile sunt încărcate
+    const hideLoader = () => {
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+    };
+
     lazyImages.forEach(img => {
         img.addEventListener('load', () => {
             img.classList.add('loaded');
+            imagesLoaded++;
+            if (imagesLoaded === lazyImages.length) {
+                hideLoader(); // Ascunde loader-ul când toate imaginile sunt încărcate
+            }
+        });
+
+        img.addEventListener('error', () => {
+            // În caz de eroare la încărcarea imaginii, ascunde loader-ul
+            imagesLoaded++;
+            if (imagesLoaded === lazyImages.length) {
+                hideLoader();
+            }
         });
     });
 
-    // Buton Scroll to Top
+    // Asigură-te că loader-ul se ascunde și dacă imaginile nu sunt lazy
+    window.addEventListener('load', () => {
+        hideLoader();  // Ascunde loader-ul când pagina este complet încărcată
+    });
+
+    // Scroll to Top Button
     const scrollToTopButton = document.getElementById('scrollToTop');
     
     window.onscroll = function () {
