@@ -5,23 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lumânări artizanale din ceară de soia cu arome naturale și teme creative. Tematică de Crăciun, băuturi și deserturi.">
     <title>Lumânări Artizanale din Ceară de Soia</title>
-
+    
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Link către fișierul CSS -->
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loader animat -->
-    <div id="loader">
-        <div class="loader-container">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="wax"></div>
-        </div>
-    </div>
-
     <header>
         <h1>Lumânări Artizanale din Ceară de Soia</h1>
         <p>Arome naturale, teme creative, perfect pentru cadouri sau pentru tine!</p>
@@ -36,66 +26,48 @@
         </ul>
     </nav>
 
-    <!-- Carousel Crăciun cu indicatori -->
-    <section id="craciun" class="carousel-section parallax">
+    <!-- Carousel Crăciun -->
+    <section id="craciun" class="carousel-section">
         <h2>Tematică de Crăciun</h2>
         <div class="carousel-container">
             <button class="carousel-control prev">◀</button>
             <div class="carousel">
                 <div class="carousel-item">
-                    <img src="https://github.com/user-attachments/assets/4c7dcc4a-c208-4fa6-aa06-ead07c2e2c46" alt="Lumânare Bradut" loading="lazy">
+                    <img src="https://github.com/user-attachments/assets/4c7dcc4a-c208-4fa6-aa06-ead07c2e2c46" alt="Lumânare Bradut">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://github.com/user-attachments/assets/3734d2ef-3063-451e-bace-7b60f604213a" alt="Lumânare Om de Zăpadă" loading="lazy">
+                    <img src="https://github.com/user-attachments/assets/3734d2ef-3063-451e-bace-7b60f604213a" alt="Lumânare Om de Zăpadă">
                 </div>
+                <!-- Mai multe produse -->
             </div>
             <button class="carousel-control next">▶</button>
         </div>
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
-        </div>
     </section>
 
-    <!-- Carousel Băuturi cu indicatori -->
-    <section id="bauturi" class="carousel-section parallax">
+    <!-- Carousel Băuturi -->
+    <section id="bauturi" class="carousel-section">
         <h2>Tematică de Băuturi</h2>
-        <div class="carousel-container">
-            <button class="carousel-control prev">◀</button>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="https://example.com/image3.jpg" alt="Lumânare Aperol" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://example.com/image4.jpg" alt="Lumânare Whiskey" loading="lazy">
-                </div>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="lumânare_aperol.jpg" alt="Lumânare Aperol">
             </div>
-            <button class="carousel-control next">▶</button>
-        </div>
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
+            <div class="carousel-item">
+                <img src="lumânare_whiskey.jpg" alt="Lumânare Whiskey">
+            </div>
+            <!-- Mai multe produse -->
         </div>
     </section>
 
-    <!-- Carousel Deserturi cu indicatori -->
-    <section id="deserturi" class="carousel-section parallax">
+    <section id="deserturi" class="carousel-section">
         <h2>Tematică de Deserturi</h2>
-        <div class="carousel-container">
-            <button class="carousel-control prev">◀</button>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="https://example.com/image5.jpg" alt="Lumânare Înghețată" loading="lazy">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://example.com/image6.jpg" alt="Lumânare Macarons" loading="lazy">
-                </div>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="lumânare_inghetata.jpg" alt="Lumânare Înghețată">
             </div>
-            <button class="carousel-control next">▶</button>
-        </div>
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
+            <div class="carousel-item">
+                <img src="lumânare_macarons.jpg" alt="Lumânare Macarons">
+            </div>
+            <!-- Mai multe produse -->
         </div>
     </section>
 
@@ -107,9 +79,6 @@
             <a href="https://tiktok.com/@pagina_ta" target="_blank">TikTok</a>
         </p>
     </footer>
-
-    <!-- Butonul "Întoarce-te la începutul paginii" -->
-    <button id="scrollToTop" title="Întoarce-te la începutul paginii">⬆</button>
 
     <script src="scripts.js"></script>
 </body>
