@@ -27,12 +27,8 @@ body {
 }
 
 .loader-container {
-    position: relative;
     width: 50px;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .flame {
@@ -52,13 +48,6 @@ body {
     }
 }
 
-/* Parallax Effect */
-.parallax {
-    background: url('your-parallax-background.jpg') no-repeat center center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 /* Header */
 header {
     text-align: center;
@@ -72,14 +61,6 @@ header h1 {
 
 header p {
     font-size: 1.5rem;
-}
-
-header a {
-    background-color: #ff6f61;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
 }
 
 /* Navigation */
@@ -103,6 +84,11 @@ nav a {
 }
 
 /* Carousel styling */
+.carousel-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
 .carousel-container {
     display: flex;
     align-items: center;
@@ -116,14 +102,23 @@ nav a {
 }
 
 .carousel-item {
-    position: absolute;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 .carousel-item img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-desc {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
 }
 
 .carousel-control {
@@ -145,16 +140,6 @@ nav a {
     right: -50px;
 }
 
-/* Lazy Loading */
-.carousel img[loading="lazy"] {
-    filter: blur(3px);
-    transition: filter 0.3s ease;
-}
-
-.carousel img[loading="lazy"]:loaded {
-    filter: none;
-}
-
 /* Buton "Scroll to Top" */
 #scrollToTop {
     display: none;
@@ -174,21 +159,19 @@ nav a {
     background-color: #ff4a3a;
 }
 
-/* Altele */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
-.indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
 }
 
-.indicator.active {
-    background-color: #ff6f61;
+footer a:hover {
+    color: #ff4a3a;
 }

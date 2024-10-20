@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Lazy loading
+    // Lazy loading pentru imagini
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     lazyImages.forEach(img => {
         img.addEventListener('load', () => {
@@ -7,13 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Loader animation
-    const loader = document.getElementById('loader');
-    window.addEventListener('load', () => {
-        loader.style.display = 'none';
-    });
-
-    // Scroll to Top Button
+    // Buton Scroll to Top
     const scrollToTopButton = document.getElementById('scrollToTop');
     
     window.onscroll = function () {
@@ -28,11 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Carousel functionality
+    // Carousel control pentru desktop
     let currentItem = 0;
     const carouselItems = document.querySelectorAll('.carousel-item');
     const totalItems = carouselItems.length;
-    const indicators = document.querySelectorAll('.indicator');
 
     function rotateCarousel(direction) {
         if (direction === 'next') {
@@ -40,18 +33,32 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (direction === 'prev') {
             currentItem = (currentItem - 1 + totalItems) % totalItems;
         }
-
         carouselItems.forEach((item, index) => {
-            const angle = (index - currentItem) * 45;
-            item.style.transform = `rotateY(${angle}deg) translateZ(200px)`;
-            item.style.opacity = index === currentItem ? '1' : '0.5';
-        });
-
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentItem);
+            item.style.transform = `translateX(${(index - currentItem) * 100}%)`;
         });
     }
 
-    document.querySelector('.next').addEventListener('click', () => rotateCarousel('next'));
-    document.querySelector('.prev').addEventListener('click', () => rotateCarousel('prev'));
+    document.querySelectorAll('.next').forEach(btn => {
+        btn.addEventListener('click', () => rotateCarousel('next'));
+    });
+
+    document.querySelectorAll('.prev').forEach(btn => {
+        btn.addEventListener('click', () => rotateCarousel('prev'));
+    });
+
+    // Suport pentru swipe pe mobil
+    let startX;
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        carousel.addEventListener('touchmove', (e) => {
+            const touchX = e.touches[0].clientX;
+            if (touchX - startX > 50) {
+                rotateCarousel('prev');
+            } else if (touchX - startX < -50) {
+                rotateCarousel('next');
+            }
+        });
+    });
 });
